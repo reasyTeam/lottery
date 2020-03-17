@@ -1,60 +1,81 @@
-let prizes = [{
-        type: 0,
-        count: 100,
-        title: '特别奖',
-        img: '../img/huawei.png'
-    }, {
-        type: 1,
-        count: 1,
-        title: '华为Mate 20X',
-        img: '../img/huawei.png'
-    },
-    {
-        type: 2,
-        count: 2,
-        title: '大疆无人机',
-        img: '../img/spark.jpg'
-    },
-    {
-        type: 3,
-        count: 3,
-        title: 'Kindle',
-        img: '../img/kindle.jpg'
-    },
-    {
-        type: 4,
-        count: 20,
-        title: '小度在家',
-        img: '../img/baidu.jpg'
-    }, {
-        type: 5,
-        title: '凌美钢笔',
-        count: 50,
-        img: '../img/lamy.png'
-    }
+/**
+ * 奖品设置
+ * type: 唯一标识，0是默认特别奖的占位符，其它奖品不可使用
+ * count: 奖品数量
+ * title: 奖品描述
+ * text: 奖品标题
+ * img: 图片地址
+ */
+const prizes = [
+  {
+    type: 0,
+    count: 1000,
+    title: "",
+    text: "特别奖"
+  },
+  {
+    type: 1,
+    count: 2,
+    text: "特等奖",
+    title: "神秘大礼",
+    img: "../img/secrit.jpg"
+  },
+  {
+    type: 2,
+    count: 5,
+    text: "一等奖",
+    title: "Mac Pro",
+    img: "../img/mbp.jpg"
+  },
+  {
+    type: 3,
+    count: 6,
+    text: "二等奖",
+    title: "华为 Mate30",
+    img: "../img/huawei.png"
+  },
+  {
+    type: 4,
+    count: 7,
+    text: "三等奖",
+    title: "Ipad Mini5",
+    img: "../img/ipad.jpg"
+  },
+  {
+    type: 5,
+    count: 8,
+    text: "四等奖",
+    title: "大疆无人机",
+    img: "../img/spark.jpg"
+  },
+  {
+    type: 6,
+    count: 9,
+    text: "五等奖",
+    title: "Kindle",
+    img: "../img/kindle.jpg"
+  },
+  {
+    type: 7,
+    count: 10,
+    text: "六等奖",
+    title: "漫步者蓝牙耳机",
+    img: "../img/edifier.jpg"
+  }
 ];
 
 /**
- * 一次抽取的奖品个数
- * 顺序为：[特别奖，一等奖，二等奖，三等奖，四等奖，五等奖]
+ * 一次抽取的奖品个数与prizes对应
  */
-const EACH_COUNT = [1, 1, 1, 1, 1, 5];
-
-const COMPANY = 'MoShang';
-const ROW_COUNT = 7;
-const COLUMN_COUNT = 17;
-
+const EACH_COUNT = [1, 1, 5, 6, 7, 8, 9, 10];
 
 /**
- * 高亮矩阵
+ * 卡片公司名称标识
  */
-const HIGHLIGHT_CELL = ['1-1', '1-2', '1-3', '2-3', '3-1', '3-2', '3-3', '4-1', '5-1', '5-2', '5-3', '1-5', '1-6', '1-7', '2-5', '2-7', '3-5', '3-7', '4-5', '4-7', '5-5', '5-6', '5-7', '1-10', '2-9', '2-10', '3-10', '4-10', '5-9', '5-10', '5-11', '1-13', '1-14', '1-15', '2-13', '2-15', '3-13', '3-14', '3-15', '4-15', '5-13', '5-14', '5-15'];
+const COMPANY = "MoShang";
 
 module.exports = {
-    prizes,
-    EACH_COUNT,
-    ROW_COUNT,
-    COLUMN_COUNT,
-    COMPANY,
-    HIGHLIGHT_CELL
+  prizes,
+  EACH_COUNT,
+  COMPANY
 };
